@@ -35,8 +35,8 @@ let s:nord14_gui = "#A3BE8C"
 let s:nord15_gui = "#B48EAD"
 
 let s:nord1_term = "0"
-let s:nord3_term = "8"
-let s:nord5_term = "7"
+let s:nord3_term = "4"
+let s:nord5_term = "4"
 let s:nord6_term = "15"
 let s:nord7_term = "14"
 let s:nord8_term = "6"
@@ -167,6 +167,7 @@ call s:hi("Underline", "", "", "", "", s:underline, "")
 "+--- Editor ---+
 call s:hi("ColorColumn", "", s:nord1_gui, "NONE", s:nord1_term, "", "")
 call s:hi("Cursor", s:nord0_gui, s:nord4_gui, "", "NONE", "", "")
+call s:hi("Variable", s:nord1_gui, s:nord4_gui, "", "NONE", "", "")
 call s:hi("CursorLine", "", s:nord1_gui, "NONE", s:nord1_term, "NONE", "")
 call s:hi("Error", s:nord4_gui, s:nord11_gui, "", s:nord11_term, "", "")
 call s:hi("iCursor", s:nord0_gui, s:nord4_gui, "", "NONE", "", "")
@@ -830,6 +831,21 @@ hi! link VimwikiList markdownListMarker
 " YAML
 " > stephpy/vim-yaml
 call s:hi("yamlKey", s:nord7_gui, "", s:nord7_term, "", "", "")
+
+" MY OVERRIDES
+augroup nord-theme-overrides
+  autocmd!
+  " Use `nord12` ("orange") as foreground color for Perl storage statements.
+  autocmd ColorScheme nord highlight perlStatementStorage ctermfg=11 guifg=#EBCB8B
+  autocmd ColorScheme nord highlight perlConditional ctermfg=11 guifg=#FBAFB6
+  autocmd ColorScheme nord highlight perlRepeat ctermfg=11 guifg=#E28991
+  autocmd ColorScheme nord highlight perlVarPlain ctermfg=11 guifg=#A6D2FD
+  autocmd ColorScheme nord highlight perlSubName ctermfg=11 guifg=#EBCB8B
+  autocmd ColorScheme nord highlight perlBracesDQ ctermfg=11 guifg=#EBCB8B
+  autocmd ColorScheme nord highlight perlMethod ctermfg=11 guifg=#F5AB94
+  autocmd ColorScheme nord highlight perlVarSimpleMember ctermfg=11 guifg=#B48EAD
+  autocmd ColorScheme nord highlight perlStatementInclude ctermfg=11 guifg=#B48EAD
+augroup END
 
 "+------------+
 "+ Public API +
