@@ -836,15 +836,19 @@ call s:hi("yamlKey", s:nord7_gui, "", s:nord7_term, "", "", "")
 augroup nord-theme-overrides
   autocmd!
   " Use `nord12` ("orange") as foreground color for Perl storage statements.
-  autocmd ColorScheme nord highlight perlStatementStorage ctermfg=11 guifg=#EBCB8B
-  autocmd ColorScheme nord highlight perlConditional ctermfg=11 guifg=#FBAFB6
-  autocmd ColorScheme nord highlight perlRepeat ctermfg=11 guifg=#E28991
+  " blue
   autocmd ColorScheme nord highlight perlVarPlain ctermfg=11 guifg=#A6D2FD
-  autocmd ColorScheme nord highlight perlSubName ctermfg=11 guifg=#EBCB8B
+  " yellow orange
+  autocmd ColorScheme nord highlight perlMethod ctermfg=11 guifg=#F7E1B6
+  autocmd ColorScheme nord highlight perlStatementStorage ctermfg=11 guifg=#F7E1B6
+  autocmd ColorScheme nord highlight perlSubName ctermfg=11 guifg=#F7E1B6
+	" purple
+  autocmd ColorScheme nord highlight perlVarSimpleMember ctermfg=11 guifg=#F5C6FD
+  autocmd ColorScheme nord highlight perlStatementInclude ctermfg=11 guifg=#F5C6FD
+  autocmd ColorScheme nord highlight perlConditional ctermfg=11 guifg=#F5C6FD
+  autocmd ColorScheme nord highlight perlRepeat ctermfg=11 guifg=#F5C6FD
+  " not working
   autocmd ColorScheme nord highlight perlBracesDQ ctermfg=11 guifg=#EBCB8B
-  autocmd ColorScheme nord highlight perlMethod ctermfg=11 guifg=#F5AB94
-  autocmd ColorScheme nord highlight perlVarSimpleMember ctermfg=11 guifg=#B48EAD
-  autocmd ColorScheme nord highlight perlStatementInclude ctermfg=11 guifg=#B48EAD
 augroup END
 
 "+------------+
