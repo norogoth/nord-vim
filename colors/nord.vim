@@ -31,7 +31,7 @@ let s:nord10_gui = "#5E81AC"
 let s:nord11_gui = "#BF616A"
 let s:nord12_gui = "#D08770"
 let s:nord13_gui = "#EBCB8B"
-let s:nord14_gui = "#A3BE8C"
+let s:nord14_gui = "#C0E2A3"
 let s:nord15_gui = "#B48EAD"
 
 let s:nord1_term = "0"
@@ -838,17 +838,47 @@ augroup nord-theme-overrides
   " Use `nord12` ("orange") as foreground color for Perl storage statements.
   " blue
   autocmd ColorScheme nord highlight perlVarPlain ctermfg=11 guifg=#A6D2FD
+  autocmd ColorScheme nord highlight javaScriptIdentifierName ctermfg=11 guifg=#A6D2FD
+  autocmd ColorScheme nord highlight javaScriptIdentifier ctermfg=11 guifg=#A6D2FD
+  autocmd ColorScheme nord highlight jsVariableDef ctermfg=11 guifg=#A6D2FD
+  autocmd ColorScheme nord highlight jsObjectKey ctermfg=12 guifg=#A6D2FD
+  
+  " light blue
+  autocmd ColorScheme nord highlight jsObjectProp ctermfg=11 guifg=#ABC7EC
+  autocmd ColorScheme nord highlight jsFuncCall ctermfg=11 guifg=#ABC7EC
+
   " yellow orange
   autocmd ColorScheme nord highlight perlMethod ctermfg=11 guifg=#F7E1B6
   autocmd ColorScheme nord highlight perlStatementStorage ctermfg=11 guifg=#F7E1B6
   autocmd ColorScheme nord highlight perlSubName ctermfg=11 guifg=#F7E1B6
-	" purple
-  autocmd ColorScheme nord highlight perlVarSimpleMember ctermfg=11 guifg=#F5C6FD
-  autocmd ColorScheme nord highlight perlStatementInclude ctermfg=11 guifg=#F5C6FD
-  autocmd ColorScheme nord highlight perlConditional ctermfg=11 guifg=#F5C6FD
-  autocmd ColorScheme nord highlight perlRepeat ctermfg=11 guifg=#F5C6FD
-  " not working
-  autocmd ColorScheme nord highlight perlBracesDQ ctermfg=11 guifg=#EBCB8B
+
+  autocmd ColorScheme nord highlight jsLogicSymbols ctermfg=11 guifg=#F7E1B6
+  autocmd ColorScheme nord highlight jsOperator ctermfg=11 guifg=#F7E1B6
+  autocmd ColorScheme nord highlight jsStorageClass ctermfg=11 guifg=#F7E1B6
+  autocmd ColorScheme nord highlight jsObjectFuncName ctermfg=11 guifg=#F7E1B6
+  autocmd ColorScheme nord highlight jsFuncName ctermfg=11 guifg=#F7E1B6
+  autocmd ColorScheme nord highlight JsObjectKey ctermfg=11 guifg=#F7E1B6
+  autocmd ColorScheme nord highlight JsFunctionKey ctermfg=11 guifg=#F7E1B6
+	
+  " purple
+  autocmd ColorScheme nord highlight perlVarSimpleMember ctermfg=11 guifg=#F6CEFD
+  autocmd ColorScheme nord highlight perlStatementInclude ctermfg=11 guifg=#F6CEFD
+  autocmd ColorScheme nord highlight perlConditional ctermfg=11 guifg=#F6CEFD
+  autocmd ColorScheme nord highlight perlRepeat ctermfg=11 guifg=#F6CEFD
+
+  autocmd ColorScheme nord highlight jsReturn ctermfg=11 guifg=#F6CEFD
+  autocmd ColorScheme nord highlight jsConditional ctermfg=11 guifg=#F6CEFD
+  autocmd ColorScheme nord highlight jsRepeat ctermfg=11 guifg=#F6CEFD
+  autocmd ColorScheme nord highlight Exception ctermfg=11 guifg=#F6CEFD
+  autocmd ColorScheme nord highlight Identifier ctermfg=11 guifg=#F6CEFD
+  " red
+  autocmd ColorScheme nord highlight jsFunction ctermfg=11 guifg=#F1ABB2
+  " orange
+  " comment
+  autocmd ColorScheme nord highlight comment ctermfg=11 guifg=#9BD4D4
+  " jsRainbow (does not work)
+  autocmd ColorScheme nord highlight javascriptRainbow_lv0_r0 ctermfg=11 guifg=#F6CEFD
+  
 augroup END
 
 "+------------+
